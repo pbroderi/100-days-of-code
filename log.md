@@ -1,13 +1,13 @@
 # 100 Days Of Code - Log
 
 ### Day 1: June 13, 2017 (Example 1)
-##### (delete me or comment me out)
+
 
 **Today's Progress**: Began building data frame with the aim of running some Bayesian regression. Made use of dplyr
 
 **Thoughts:**  dplyr has been something just beyond the horizon for awhile. Now it has arrived. I feel like I won't be able to really start with any data science until these sorts of manipulations are natural. 
 
-**Link to work:** [Calculator App](http://www.example.com)
+
 
 ### Day 0: February 30, 2016 (Example 2)
 ##### (delete me or comment me out)
