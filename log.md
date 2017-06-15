@@ -1,6 +1,6 @@
 # 100 Days Of Code - Log
 
-### Day 1: June 13, 2017 (Example 1)
+### Day 1: June 13, 2017 
 
 
 **Today's Progress**: Began building data frame with the aim of running some Bayesian regression. Made use of dplyr
@@ -9,14 +9,14 @@
 
 
 
-### Day 0: February 30, 2016 (Example 2)
+### Day 2: June 14, 2017 
 ##### (delete me or comment me out)
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+**Today's Progress**: Data frame is complete and the Bayesian model is working. Next up, make a prediction. After that that rest is writing so I'll have to move onto another coding project
 
 **Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
 
-**Link(s) to work**: [Calculator App](http://www.example.com)
+**Link(s) to work**: [Rmd of the model]()
 
 
 ### Day 1: June 27, Monday
