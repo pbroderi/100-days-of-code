@@ -1,0 +1,117 @@
+---
+title: "Bayesian modeling and prediction for movies"
+output: 
+  html_document: 
+    fig_height: 4
+    highlight: pygments
+    theme: spacelab
+---
+
+## Setup
+
+### Load packages
+
+```{r load-packages, message = FALSE}
+library(ggplot2)
+library(dplyr)
+library(statsr)
+library(BAS)
+library(graphics)
+```
+
+### Load data
+
+
+```{r load-data}
+load("movies.Rdata")
+```
+
+
+
+* * *
+
+## Part 1: Data
+
+First, we should take a look at the data. The producer has specifically asked about the audience score, so this variable should receive extra attention. This data has been gathered from popular movie web sites. Since the data has been generated through a survey, and not through any sort of randomized study. The participants on these sites tend to be movie fans, so we should be very careful when generalizing to wider audiences. (The characterstics that inspire a viewer to participate on a fan site might also impact their judgements about movies. )
+
+```{r}
+names(movies)
+str(movies)
+summary(movies$audience_score)
+hist(movies$audience_score, col = "blue", xlab = "Audience Score")
+
+```
+
+* * *
+
+## Part 2: Data manipulation
+
+We will start by building the extra variables that have been requested. Then we will subset the data frame to include only those variable which will be used in the model. This will make later actions easier to perform. 
+
+```{r, echo=FALSE}
+
+
+
+
+ movies <-movies %>% mutate(feature_film = if_else(title_type == "Feature Film", 'yes' ,'no'), drama = if_else(genre == "Drama", "yes", "no"), mpaa_rating_R = if_else(mpaa_rating == "R", "yes", "no"), oscar_season = if_else(thtr_rel_month %in% c(10, 11,12), "yes", "no"), summer_season = if_else(thtr_rel_month %in% c(5,6,7,8), "yes", "no") )
+
+
+moviesdf <- select(movies, audience_score, feature_film, drama, runtime, mpaa_rating_R, thtr_rel_year, oscar_season, summer_season, imdb_rating, imdb_num_votes, critics_score, audience_rating, best_pic_nom, best_pic_win, best_actor_win, best_actress_win, best_dir_win, top200_box)
+ 
+
+
+```
+
+
+* * *
+
+## Part 3: Exploratory data analysis
+
+
+
+```{r}
+glimpse(moviesdf)
+
+par( mfrow = c(2,2))
+
+boxplot(movies$audience_score, movies$title_type)
+table(movies$audience_score, movies$genre)
+table(movies$title_type, movies$genre)
+
+
+```
+
+The EDA revealed one missing data cell. For the sake of simplicity, the one case is excluded from the analysis. 
+
+* * *
+
+## Part 4: Modeling
+
+Now we are ready to build our first model. Since we are going to be making our predictions for movies were are not in the data, we do not have to bread the data into a training set and a test set. (This data is the training set. )
+```{r}
+set.seed(123)
+
+  bma_audience_rating = bas.lm(audience_score ~ ., data=moviesdf, 
+                          prior="BIC", modelprior=uniform(), initprobs="eplogp")
+
+
+plot(bma_audience_rating)
+image(bma_audience_rating, rotate = F)
+summary(bma_audience_rating)
+
+```
+
+* * *
+
+The graphical outputs of the model indicate that the audience rating and the imbd rating are the two variables most likely to be included in any model. This is not surprising since the Audience rating is derived from the audience score and the critics score is presumably not independent of the audience score. Critics are audience members and are successful as critics if their evaluations of a movie correspond to an ideal notion of what the audience wants in a movie. 
+
+## Part 5: Prediction
+
+NOTE: Insert code chunks as needed by clicking on the "Insert a new code chunk" 
+button above. Make sure that your code is visible in the project you submit. 
+Delete this note when before you submit your work.
+
+* * *
+
+## Part 6: Conclusion
+
