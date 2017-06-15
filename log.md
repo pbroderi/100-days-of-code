@@ -16,7 +16,7 @@
 
 **Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
 
-**Link(s) to work**: [Rmd of the model]()
+**Link(s) to work**: [Rmd of the model](bayesian_project.rmd)
 
 
 ### Day 1: June 27, Monday
