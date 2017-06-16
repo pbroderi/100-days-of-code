@@ -14,16 +14,16 @@
 
 **Today's Progress**: Data frame is complete and the Bayesian model is working. Next up, make a prediction. After that that rest is writing so I'll have to move onto another coding project
 
-**Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+**Thoughts**:
 
 **Link(s) to work**: [Rmd of the model](bayesian_project.Rmd)
 
 
-### Day 1: June 27, Monday
+### Day 3: June 15, 2017
 
-**Today's Progress**: I've gone through many exercises on FreeCodeCamp.
+**Today's Progress**: Models is built. Prediction is created. Most of my coding time was spent building a data frame for the movie I was going to make predictions for. Now it's a matter of trying to interpret the results. Part of tomorrow's (precoding) efforts will be devoted to deciding on my next few projects. 
 
-**Thoughts** I've recently started coding, and it's a great feeling when I finally solve an algorithm challenge after a lot of attempts and hours spent.
+**Thoughts** One thing about R is that the silliest things can cause problems. I feel like its probably a harder language to debug than many others. I think that I'm pretty good at getting things to run, but I wish I had a better sense of the significance of the models I am playing with. 
 
 **Link(s) to work**
 1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
