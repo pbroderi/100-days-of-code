@@ -28,3 +28,10 @@
 **Link(s) to work**
 1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
 2. [Title Case a Sentence](https://www.freecodecamp.com/challenges/title-case-a-sentence)
+
+### Day 1: January 1, 2018 
+
+
+**Today's Progress**: Getting my tools together again. Updating R tools. 
+
+**Thoughts:**  I'll be working through R for Data Science, and maybe a little freecodecamp, at least until a more siginificant project shows. Hoping to work some data science into my Philosophy of Science class this spring. 
