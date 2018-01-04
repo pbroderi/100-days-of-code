@@ -35,3 +35,17 @@
 **Today's Progress**: Getting my tools together again. Updating R tools. 
 
 **Thoughts:**  I'll be working through R for Data Science, and maybe a little freecodecamp, at least until a more siginificant project shows. Hoping to work some data science into my Philosophy of Science class this spring. 
+
+### Day 2: January 2, 2018 
+
+
+**Today's Progress**: Trouble setting up Tidyverse 
+
+**Thoughts:** The first few weeks of these 100 days are going to be devoted to stats and data science, even though I have some real projects in web design that I want to pursue  
+
+### Day 3: January 3, 2018 
+
+
+**Today's Progress**: Tidyverse setup completed. Into the third section of "R for Data Science" 
+
+**Thoughts:**   I will be very happy if 100 days from now I have an online portfolio to communicate my brand to people. 
